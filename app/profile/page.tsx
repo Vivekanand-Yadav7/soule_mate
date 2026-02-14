@@ -1,7 +1,7 @@
 'use client';
 
 import { useState, useEffect } from 'react';
-import { useRouter } from 'react-router-dom'; // Using next/navigation but keeping logic clean
+
 
 interface Trait {
     id: string;
@@ -101,8 +101,8 @@ export default function ProfilePage() {
                             key={trait.id}
                             onClick={() => toggleTrait(trait.id)}
                             className={`group flex items-center justify-between p-6 rounded-2xl transition-all duration-500 transform ${selectedTraits.includes(trait.id)
-                                    ? 'love-gradient text-white shadow-xl -translate-y-1 scale-105'
-                                    : 'bg-white/40 hover:bg-white/70 text-gray-700 border border-white/60 hover:shadow-lg'
+                                ? 'love-gradient text-white shadow-xl -translate-y-1 scale-105'
+                                : 'bg-white/40 hover:bg-white/70 text-gray-700 border border-white/60 hover:shadow-lg'
                                 }`}
                         >
                             <span className="font-bold text-lg">{trait.name}</span>
